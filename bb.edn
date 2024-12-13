@@ -1,1 +1,2 @@
-{:paths ["."]}
+{:paths ["."]
+ :bbin/bin {atomize {:main-opts ["-m" "atomize"]}}}
