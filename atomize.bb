@@ -60,6 +60,7 @@ Options:
 
 (defn add-entry [atom-xml new-entry]
   (let [{:keys [entry-limit]} config
+        entry-limit (if (string? entry-limit) (Integer/parseInt entry-limit) entry-limit)
         {:keys [entries others]} (group-by entry? (:content atom-xml))
         new-entry-xml (entry->map new-entry)
         all-entries (concat [new-entry-xml] entries)
