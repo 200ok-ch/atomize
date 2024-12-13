@@ -1,3 +1,2 @@
-{:deps {atomize {:local/root "."}}
- :paths ["."]
+{;; :deps {atomize {:local/root "."}}
  :bbin/bin {atomize {:main-opts ["-m" "atomize"]}}}
